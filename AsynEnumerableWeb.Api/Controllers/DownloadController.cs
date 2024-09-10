@@ -17,26 +17,26 @@ public class DownloadController : ControllerBase
     }
     
     [HttpGet("download-stream")]
-    public async Task DownloadStreamFile()
+    public async Task DownloadStreamFile(CancellationToken cancellationToken)
     {
         Response.ContentType = "text/plain";
         Response.Headers.ContentDisposition = "attachment;filename=data.txt";
-        var data = _dataBrowser.GetUsersNames();
-
+        var data = _dataBrowser.GetUsersNames(cancellationToken);
+    
         await using var streamWriter =
             new StreamWriter(Response.Body, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false));
         
         await foreach (var item in data)
         {
             await streamWriter.WriteLineAsync(item);
-            await streamWriter.FlushAsync();
+            await streamWriter.FlushAsync(cancellationToken);
         }
     }
 
     [HttpGet("download-file")]
-    public FileContentResult DownloadFile()
+    public FileContentResult DownloadFile(CancellationToken cancellationToken)
     {
-        var data = _dataBrowser.GetUsersNames().ToBlockingEnumerable();
+        var data = _dataBrowser.GetUsersNames(cancellationToken).ToBlockingEnumerable();
         
         return new FileContentResult(GetBytes(data), "text/plain")
         {
