@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEnumerable.Core", "Asy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreAsync", "MoreAsync\MoreAsync.csproj", "{6D811C0D-851C-4697-9A38-7B0A16B5043F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{212B0AA6-86BE-4C3A-9F5A-B2CEAA0B2970}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{6D811C0D-851C-4697-9A38-7B0A16B5043F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D811C0D-851C-4697-9A38-7B0A16B5043F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D811C0D-851C-4697-9A38-7B0A16B5043F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{212B0AA6-86BE-4C3A-9F5A-B2CEAA0B2970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{212B0AA6-86BE-4C3A-9F5A-B2CEAA0B2970}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{212B0AA6-86BE-4C3A-9F5A-B2CEAA0B2970}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{212B0AA6-86BE-4C3A-9F5A-B2CEAA0B2970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

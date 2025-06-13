@@ -1,7 +1,7 @@
 export const Download: React.FC = () => {
     const handleDownload = async () => {
         try {
-            const response = await fetch('https://localhost:7079/download/download-stream');
+            const response = await fetch('http://localhost:5042/api/download/download-file');
             if (!response.ok) {
                 throw new Error(`Error: ${response.statusText}`);
             }
